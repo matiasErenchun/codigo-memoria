@@ -10,4 +10,5 @@ while(i<10):
     mi_socket.send(str.encode(mensaje))
     mi_socket.close()
     sleep(1)
+    i+=1
 print("bye bye bro")
