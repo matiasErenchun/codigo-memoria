@@ -28,3 +28,8 @@ def camPreview(previewName, camID):
         if key == 27:  # exit on ESC
             break
     cv2.destroyWindow(previewName)
+
+if __name__ == '__main__':
+    print("hola")
+    thread1 = camThread("Camera 1", 0)
+    thread1.start()
