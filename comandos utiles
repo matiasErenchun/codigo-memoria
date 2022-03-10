@@ -1,0 +1,7 @@
+Comandos GIT
+para revisar los branch existentes
+    git branch -a (el -a muestra todos)
+para pasar d eun branch a otro
+    git checkout nombreDeLaRama
+para actualizar la rama actual sobreescribiendo lo que tenemos
+    git pull --rebase
