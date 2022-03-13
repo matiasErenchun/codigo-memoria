@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d75583c-7ff4-44cf-aaa4-f1235da7d0c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +150,7 @@
       <updated>1646860061491</updated>
       <workItem from="1646860062927" duration="1038000" />
       <workItem from="1646948197455" duration="718000" />
-      <workItem from="1647198072723" duration="1870000" />
+      <workItem from="1647198072723" duration="2166000" />
     </task>
     <servers />
   </component>
@@ -171,6 +172,6 @@
     <SUITE FILE_PATH="coverage/codigo_memoria$servidorPajaros.coverage" NAME="servidorPajaros Coverage Results" MODIFIED="1646860190691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoEmisor.coverage" NAME="pruebaSocketVideoEmisor Coverage Results" MODIFIED="1647199631536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/codigo_memoria$pruebaCamara.coverage" NAME="pruebaCamara Coverage Results" MODIFIED="1647198132543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoServidor.coverage" NAME="pruebaSocketVideoServidor Coverage Results" MODIFIED="1647199948908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoServidor.coverage" NAME="pruebaSocketVideoEmisor Coverage Results" MODIFIED="1647200168695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
