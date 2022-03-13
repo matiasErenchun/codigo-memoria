@@ -66,7 +66,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pruebaSocketVideoEmisor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pruebaSocketVideoEmisor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,7 +79,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\repoGit\codigo-memoria\pruebaSocketVideoEmisor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +157,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.pruebaSocketVideoReseptor (1)" />
-        <item itemvalue="Python.pruebaSocketVideoEmisorr" />
+        <item itemvalue="Python.pruebaSocketVideoEmisor (1)" />
         <item itemvalue="Python.pruebaSocketVideoReseptor" />
         <item itemvalue="Python.pruebaCamara" />
         <item itemvalue="Python.servidorPajaros" />
@@ -174,7 +174,8 @@
       <updated>1646860061491</updated>
       <workItem from="1646860062927" duration="1038000" />
       <workItem from="1646948197455" duration="718000" />
-      <workItem from="1647198072723" duration="3509000" />
+      <workItem from="1647198072723" duration="6646000" />
+      <workItem from="1647207101178" duration="1567000" />
     </task>
     <servers />
   </component>
@@ -193,7 +194,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoReseptor__1_.coverage" NAME="pruebaSocketVideoReseptor (1) Coverage Results" MODIFIED="1647202201375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoEmisor__1_.coverage" NAME="pruebaSocketVideoEmisor (1) Coverage Results" MODIFIED="1647207131724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoReseptor__1_.coverage" NAME="pruebaSocketVideoReseptor (1) Coverage Results" MODIFIED="1647207136492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/codigo_memoria$servidorPajaros.coverage" NAME="servidorPajaros Coverage Results" MODIFIED="1646860190691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoEmisor.coverage" NAME="pruebaSocketVideoEmisor Coverage Results" MODIFIED="1647199631536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/codigo_memoria$pruebaCamara.coverage" NAME="pruebaCamara Coverage Results" MODIFIED="1647198132543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -4,7 +4,7 @@ import socket, cv2, pickle, struct
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host_name = socket.gethostname()
 #host_ip = socket.gethostbyname(host_name)
-host_ip='192.168.50.24'
+host_ip='192.168.1.38'
 print('HOST IP:', host_ip)
 port = 9999
 socket_address = (host_ip, port)
@@ -23,7 +23,7 @@ while True:
     if client_socket:
         vid = cv2.VideoCapture(0)
 
-        while (vid.isOpened()):
+        while vid.isOpened():
             img, frame = vid.read()
             a = pickle.dumps(frame)
             message = struct.pack("Q", len(a)) + a
