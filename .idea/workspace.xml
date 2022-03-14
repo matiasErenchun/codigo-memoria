@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d75583c-7ff4-44cf-aaa4-f1235da7d0c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pruebaSocketVideoReseptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/pruebaSocketVideoReseptor.py" afterDir="false" />
-    </list>
+    <list default="true" id="9d75583c-7ff4-44cf-aaa4-f1235da7d0c1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,8 +39,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.pruebaSocketVideoReseptor (1)">
-    <configuration name="pruebaCamara" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.pruebaSocketCliente">
+    <configuration name="pruebaSockServidor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -57,7 +53,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaCamara.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaSockServidor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -66,7 +62,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pruebaSocketVideoEmisor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pruebaSocketCliente" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,7 +75,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaSocketVideoEmisor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaSocketCliente.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pruebaSocketVideoReseptor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pruebaSocketVideoEmisor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,7 +97,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pruebaSocketVideoReseptor.py" />
+      <option name="SCRIPT_NAME" value="E:\repoGit\pruebas-de-codigo-y-algoritmos\pythonProject\pruebaSocketVideoEmisor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,7 +119,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\repoGit\codigo-memoria\pruebaSocketVideoReseptor.py" />
+      <option name="SCRIPT_NAME" value="E:\repoGit\pruebas-de-codigo-y-algoritmos\pythonProject\pruebaSocketVideoReseptor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="servidorPajaros" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pruebaSocketVideoReseptor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,7 +141,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/servidorPajaros.py" />
+      <option name="SCRIPT_NAME" value="E:\repoGit\pruebas-de-codigo-y-algoritmos\pythonProject\pruebaSocketVideoReseptor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pruebaSocketCliente" />
+        <item itemvalue="Python.pruebaSockServidor" />
         <item itemvalue="Python.pruebaSocketVideoReseptor (1)" />
         <item itemvalue="Python.pruebaSocketVideoEmisor (1)" />
         <item itemvalue="Python.pruebaSocketVideoReseptor" />
-        <item itemvalue="Python.pruebaCamara" />
-        <item itemvalue="Python.servidorPajaros" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +171,7 @@
       <workItem from="1646860062927" duration="1038000" />
       <workItem from="1646948197455" duration="718000" />
       <workItem from="1647198072723" duration="6646000" />
-      <workItem from="1647207101178" duration="1567000" />
+      <workItem from="1647207101178" duration="1755000" />
     </task>
     <servers />
   </component>
