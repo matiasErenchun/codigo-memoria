@@ -15,7 +15,7 @@ try:
         else:
             angulo = 0
         servo1.ChangeDutyCycle(2 + (angulo / 18))
-        time.sleep(0.5)
+        time.sleep(0.7)
         servo1.ChangeDutyCycle(0)
         i += 1
 finally:
