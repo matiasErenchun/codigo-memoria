@@ -3,7 +3,7 @@ import time
 
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setip(11, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
 servo1 = GPIO.PWM(11, 50)
 
 servo1.start(0)
