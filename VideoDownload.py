@@ -40,8 +40,8 @@ def transfor_video_to_image():
                 while(videocaptura.isOpened()):
                     os.path.join(patdestino)
                     ret, frame = videocaptura.read()
-                    if(ret== True and count%25 == 0):
-                        cv2.imwrite(midestino + 'img-%05d.jpg' % count, frame)
+                    if(ret== True and count%25 == 0):#revisar como quedan los nombres
+                        cv2.imwrite(midestino + video + 'img-%05d.jpg' % count, frame)
                         if(cv2.waitKey(1) == ord('s')):
                             break
                     elif(not ret):
