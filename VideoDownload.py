@@ -15,9 +15,11 @@ def descargarVideo(url):
             .download(
             output_path=out_put_path)
         print("se descargo: %s", youtube.title)
+        namefiel=youtube.title+".mp4"
+        return 1,namefiel
     except:
         print("error al tratar de descargar el video")
-
+        return -1
 
 def transfor_video_to_image():
     path_videos = "D:\\videosRecolectados"
@@ -28,34 +30,84 @@ def transfor_video_to_image():
             pathvideo = os.path.join(path, video)
             videocaptura = cv2.VideoCapture(pathvideo)
             print("nombre video:" + video)
-            count =0
-            while(videocaptura.isOpened()):
-                os.path.join(patdestino)
-                ret, frame = videocaptura.read()
-                if(ret== True and count%25 == 0):
-                    cv2.imwrite(patdestino + 'img-%05d.jpg' % count, frame)
-                    if(cv2.waitKey(1) == ord('s')):
+            mipath = os.path.join(patdestino, video + "\\")
+            print(mipath)
+            if not os.path.exists(mipath):
+                print("no existe")
+                os.mkdir(mipath)
+                midestino = os.path.join(mipath)
+                count =0
+                while(videocaptura.isOpened()):
+                    os.path.join(patdestino)
+                    ret, frame = videocaptura.read()
+                    if(ret== True and count%25 == 0):
+                        cv2.imwrite(midestino + 'img-%05d.jpg' % count, frame)
+                        if(cv2.waitKey(1) == ord('s')):
+                            break
+                    elif(not ret):
                         break
-                elif(not ret):
-                    break
-                count+=1
+                    count+=1
+            else:
+                print("la carpeta de"+video+" ya existe")
         except:
             print("error al abrir el video")
     print("eso es to, eso es to, eso es todo amigos")
 
-
-
-
-
-menu = '''
-si desea descargar un video ingrese un numero entero positivo si desea salir ingrese 0:
+'''def transfor_video_to_image(video):
+    path_videos = "D:\\videosRecolectados"
+    patdestino = "D:\\framesdevideorecolectado\\"
+    path = os.path.join(path_videos)
+    try:
+        pathvideo = os.path.join(path, video)
+        videocaptura = cv2.VideoCapture(pathvideo)
+        print("nombre video:" + video)
+        mipath = os.path.join(patdestino, video+"\\")
+        print(mipath)
+        if not os.path.exists(mipath):
+            print("no existe")
+            os.mkdir(mipath)
+        midestino = os.path.join(mipath)
+        print("destino:"+midestino)
+        count = 0
+        videoCondition=videocaptura.isOpened()
+        print("videoCondition:"+videoCondition)
+        while videoCondition:
+            os.path.join(mipath)
+            ret, frame = videocaptura.read()
+            if (ret == True and count%50 == 0):
+                print("cortando" + midestino)
+                status = cv2.imwrite(midestino + 'img-%05d.jpg' % count, frame)
+                print("Image written to file-system : ", status)
+                if cv2.waitKey(1) == ord('s'):
+                    break
+            elif not ret:
+                print("terminado")
+                break
+            count += 1
+    except:
+        print("error al abrir el video")
+    print("se termino de cortar el video:"+video)
 '''
-print(menu)
-valor = int(input("ingrese la opcion: "))
-while (valor > 0):
-    url = str(input("ingrese la url del video"))
-    descargarVideo(url)
-    print(menu)
+
+def menu():
+    print("ingrese una de las siguentes opciones:")
+    print("0 para descargar un vedeo y tranformarlo a fotogramas.")
+    print("1 para tranformar un video, de la carpeta videos capturados, a fotogramas.")
+    print("cualquier otro valor terminara el programa.")
     valor = int(input("ingrese la opcion: "))
-print("bye bye bro")
-transfor_video_to_image()
+    if valor == 0:
+        url = str(input("ingrese la url del video"))
+        respuesta, namefile = descargarVideo(url)
+        if respuesta > 0:
+            print(namefile)
+            transfor_video_to_image()
+    elif valor == 1:
+        print("transformando")
+        transfor_video_to_image()
+    return valor
+
+
+valor = menu()
+while 0 <= valor <= 1:
+    valor = menu()
+print("bye bye ")

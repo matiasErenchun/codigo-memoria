@@ -22,3 +22,5 @@ finally:
     servo1.stop()
     GPIO.cleanup()
     print("adios")
+
+#FALTA HACER QUE CUANDO PARE SE ASEGURE DE REGRESAR AL PUNTO 0°
