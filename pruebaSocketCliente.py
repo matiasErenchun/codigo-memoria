@@ -8,6 +8,7 @@ client_socket.connect((host_ip, port))
 
 while True:
     vid = cv2.VideoCapture(0)
+    vid.set(cv2.CAP_PROP_FPS, 15)
     while vid.isOpened():
         img, frame = vid.read()
         a = pickle.dumps(frame)
