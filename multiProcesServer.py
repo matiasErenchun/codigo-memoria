@@ -1,4 +1,3 @@
-
 import socket, cv2, pickle, struct
 
 # Socket Create
@@ -22,6 +21,7 @@ payload_size = struct.calcsize("Q")
 client_socket, addr = server_socket.accept()
 print('GOT CONNECTION FROM:', addr)
 continuar = True
+count=0
 while continuar:
     if client_socket:
         while len(data) < payload_size:
@@ -39,6 +39,8 @@ while continuar:
             frame_data = data[:msg_size]
             data = data[msg_size:]
             frame = pickle.loads(frame_data)
+            cv2.imwrite('D:\\basura\\img-%05d.jpg' % count, frame)
+            count+=1
             cv2.imshow("RECEIVING VIDEO", frame)
             key = cv2.waitKey(20)
             if key == 27:  # exit on ESC
