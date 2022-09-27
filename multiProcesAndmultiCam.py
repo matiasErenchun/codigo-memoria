@@ -5,7 +5,7 @@ import cv2
 import pickle
 import struct
 import socket
-
+import numpy as np
 
 def camPreview(previewName, camID):
     cv2.namedWindow(previewName)
@@ -45,7 +45,8 @@ def info(cola, nombre, camid):
             rval = False
             continuar = False
         while rval and i < 10:
-            messajes = Mensaje('on', nombre, frame)
+            image_np = np.array(frame)
+            messajes = Mensaje('on', nombre, image_np)
             cola.put(messajes)
             rval, frame = cam.read()
             i += 1
@@ -54,7 +55,7 @@ def info(cola, nombre, camid):
         cola.put(men)
 
 def send(client_socket, frame):
-    a = pickle.dumps(frame)
+    a = pickle.dumps(frame, 0)
     message = struct.pack("Q", len(a)) + a
     client_socket.sendall(message)
 

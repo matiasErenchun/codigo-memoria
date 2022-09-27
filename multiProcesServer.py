@@ -1,5 +1,7 @@
 import socket, cv2, pickle, struct
 
+import numpy as np
+
 # Socket Create
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host_name = socket.gethostname()
@@ -16,18 +18,17 @@ server_socket.bind(socket_address)
 server_socket.listen(5)
 print("LISTENING AT:", socket_address)
 data = b""
-payload_size = struct.calcsize("Q")
+payload_size = struct.calcsize(">Q")
 # Socket Accept
 client_socket, addr = server_socket.accept()
 print('GOT CONNECTION FROM:', addr)
 continuar = True
-count=0
+count = 0
 while continuar:
     if client_socket:
         while len(data) < payload_size:
             packet = client_socket.recv(4 * 1024)  # 4K
             if not packet:
-                continuar = False
                 break
             data += packet
         if continuar:
@@ -38,9 +39,9 @@ while continuar:
                 data += client_socket.recv(4 * 1024)
             frame_data = data[:msg_size]
             data = data[msg_size:]
-            frame = pickle.loads(frame_data)
+            frame = pickle.loads(frame_data, fix_imports=True, encoding="bytes")
             cv2.imwrite('D:\\basura\\img-%05d.jpg' % count, frame)
-            count+=1
+            count += 1
             cv2.imshow("RECEIVING VIDEO", frame)
             key = cv2.waitKey(20)
             if key == 27:  # exit on ESC
