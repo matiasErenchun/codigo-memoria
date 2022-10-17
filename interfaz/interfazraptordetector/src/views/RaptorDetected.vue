@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>{{name}} un ave paraz fue detectada id imagen:{{$route.params.id}}</h1>
+  <div id="formularioyimagen">
+    <h1 id="textoAlerta">{{name}} un ave rapaz fue detectada id imagen:{{$route.params.id}}</h1>
     <img style="width: 80%" :src="img" alt="alt"/>
   </div>
 </template>
@@ -43,5 +43,18 @@ export default {
 </script>
 
 <style scoped>
+#formularioyimagen
+{
+  padding-top: 5%;
+  width: 90%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 1px solid #ccc;
+  box-shadow: 7px 7px 7px #3A6670
+}
 
+#textoAlerta
+{
+  font-size: 3vw;
+}
 </style>
