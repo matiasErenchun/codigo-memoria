@@ -11,7 +11,7 @@
           <div class=".col-md-4">
             <h4>¿Considera la deteccion Correcta?</h4>
             <div id="formulario">
-              <form>
+              <form v-on:submit.prevent>
                 <div class="mb-3">
                   <div class="form-check">
                     <input v-model="correcto" value="1" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -34,7 +34,7 @@
                 </div>
                 <div>
                   <br/>
-                  <button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary" v-on:click="send">Enviar</button>
                   <br/>
                 </div>
               </form>
@@ -72,27 +72,28 @@ export default {
       {
         async gentimagen()
         {
-          const datos = await fetch("http://127.0.0.1:5000/imagen",{
+          return  await fetch("http://127.0.0.1:5000/imagen",{
             method: 'POST',
             headers: {
               'id': this.$route.params.id
             }
-          })
-          const respuesta = await datos.json()
+          }).then(response =>
+          {
+            return response.json()
+          }).then(jsonResponse=>
+          {
+            this.img=jsonResponse.url
+          }).catch( () =>
+          {
+            alert('Error al cargar imagen.')
 
-          console.log(respuesta.url)
-          this.img=respuesta.url
+          })
         },
-        changeCorrecto()
+        send: function ()
         {
-          if (this.correcto===1)
-          {
-            this.correcto=0
-          }
-          else
-          {
-            this.correcto=1
-          }
+            console.log(this.correcto)
+            console.log(this.comentario)
+            console.log(this.$route.params.id)
         }
       }
 }
