@@ -51,6 +51,7 @@
 export default {
   name: "RaptorDetected",
   data: () =>({
+    id:-1,
     img: "",
     alt: "",
     comentario:"",
@@ -83,17 +84,30 @@ export default {
           }).then(jsonResponse=>
           {
             this.img=jsonResponse.url
+            this.id=jsonResponse.id
           }).catch( () =>
           {
             alert('Error al cargar imagen.')
 
           })
         },
-        send: function ()
+        async send()
         {
-            console.log(this.correcto)
-            console.log(this.comentario)
-            console.log(this.$route.params.id)
+          return  await fetch("http://127.0.0.1:5000/save_validation",{
+            method: 'POST',
+            headers: {
+              'idDetection': this.id,
+              'selectedOption':this.correcto,
+              'comments':this.comentario
+            }
+          }).then(() =>
+          {
+            alert('datos guardados')
+          }).catch( () =>
+          {
+            alert('error datos no guardados')
+
+          })
         }
       }
 }
