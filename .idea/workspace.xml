@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d75583c-7ff4-44cf-aaa4-f1235da7d0c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/interface/TestInterface.py" afterDir="false" />
+    <list default="true" id="eecbf171-8265-446f-8fe7-7bfb1a401e45" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiCamTest/MultiCamv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codigo-memoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codigo-memoria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiCamTest/pruebaCamara.py" beforeDir="false" afterPath="$PROJECT_DIR$/MultiCamTest/pruebaCamara.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,35 +32,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26AIeqZG1YwNzmcGNE7KaO74z0f" />
+  <component name="ProjectId" id="2NtPAEUQIiNNdvwdAnlCncmZTON" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/repoGit/codigo-memoria&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\repoGit\codigo-memoria" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\repoGit\codigo-memoria\ServoMotorController" />
-      <recent name="E:\repoGit\codigo-memoria\TestSockets" />
-      <recent name="E:\repoGit\codigo-memoria\MultiCamTest" />
-      <recent name="E:\repoGit\codigo-memoria\VideoDownloader" />
-      <recent name="E:\repoGit\codigo-memoria" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.si">
-    <configuration name="TestInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="Python.pruebaCamara">
+    <configuration name="MultiCamv2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,12 +58,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MultiCamTest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface/TestInterface.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MultiCamTest/MultiCamv2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,29 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chicocl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="codigo-memoria" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface/chicocl.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pruebaCamara (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pruebaCamara" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="codigo-memoria" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,146 +94,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="raptorAlerterBot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="codigo-memoria" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TelegramBot" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TelegramBot/raptorAlerterBot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="si" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="codigo-memoria" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface/si.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.si" />
-      <item itemvalue="Python.chicocl" />
-      <item itemvalue="Python.TestInterface" />
-      <item itemvalue="Python.raptorAlerterBot" />
-      <item itemvalue="Python.pruebaCamara (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.si" />
-        <item itemvalue="Python.chicocl" />
-        <item itemvalue="Python.TestInterface" />
-        <item itemvalue="Python.raptorAlerterBot" />
-        <item itemvalue="Python.pruebaCamara (1)" />
+        <item itemvalue="Python.pruebaCamara" />
+        <item itemvalue="Python.MultiCamv2" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9d75583c-7ff4-44cf-aaa4-f1235da7d0c1" name="Changes" comment="" />
-      <created>1646860061491</created>
+      <changelist id="eecbf171-8265-446f-8fe7-7bfb1a401e45" name="Changes" comment="" />
+      <created>1680480259435</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646860061491</updated>
-      <workItem from="1646860062927" duration="1038000" />
-      <workItem from="1646948197455" duration="718000" />
-      <workItem from="1647198072723" duration="6646000" />
-      <workItem from="1647207101178" duration="1755000" />
-      <workItem from="1647287076577" duration="930000" />
-      <workItem from="1647459376575" duration="1011000" />
-      <workItem from="1648490653789" duration="1061000" />
-      <workItem from="1649014826258" duration="1610000" />
-      <workItem from="1649016609954" duration="7702000" />
-      <workItem from="1649273599077" duration="182000" />
-      <workItem from="1650921288910" duration="1098000" />
-      <workItem from="1651031676214" duration="1955000" />
-      <workItem from="1651089188511" duration="3183000" />
-      <workItem from="1651966124206" duration="607000" />
-      <workItem from="1656896214950" duration="83000" />
-      <workItem from="1661019597763" duration="6364000" />
-      <workItem from="1661026062598" duration="3891000" />
-      <workItem from="1661123313844" duration="33000" />
-      <workItem from="1661199911265" duration="2712000" />
-      <workItem from="1661281100938" duration="322000" />
-      <workItem from="1661733548529" duration="599000" />
-      <workItem from="1661897458195" duration="4496000" />
-      <workItem from="1662060422523" duration="3606000" />
-      <workItem from="1662237064883" duration="811000" />
-      <workItem from="1662402971269" duration="1814000" />
-      <workItem from="1662404818322" duration="3411000" />
-      <workItem from="1664133749757" duration="4993000" />
-      <workItem from="1664212571345" duration="4830000" />
-      <workItem from="1664298550655" duration="13595000" />
-      <workItem from="1664735829254" duration="3217000" />
-      <workItem from="1664917916938" duration="1363000" />
-      <workItem from="1665103352056" duration="741000" />
-      <workItem from="1665192036700" duration="729000" />
-      <workItem from="1665340885120" duration="605000" />
+      <updated>1680480259435</updated>
+      <workItem from="1680480260499" duration="2269000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/codigo_memoria$raptorAlerterBot.coverage" NAME="raptorAlerterBot Coverage Results" MODIFIED="1664738311045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TelegramBot" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$VideoDownload.coverage" NAME="VideoDownload Coverage Results" MODIFIED="1661032325872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoReseptor__1_.coverage" NAME="pruebaSocketVideoReseptor (1) Coverage Results" MODIFIED="1647207136492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$multiprocess.coverage" NAME="multiprocess Coverage Results" MODIFIED="1662063439092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$servo1.coverage" NAME="servo1 Coverage Results" MODIFIED="1661020932953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$TestInterface.coverage" NAME="TestInterface Coverage Results" MODIFIED="1664919190418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSockServidor.coverage" NAME="pruebaSockServidor Coverage Results" MODIFIED="1648490684937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaCamara__1_.coverage" NAME="pruebaCamara (1) Coverage Results" MODIFIED="1664312289314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MultiCamTest" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketCliente.coverage" NAME="pruebaSocketCliente Coverage Results" MODIFIED="1647287155111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$chicocl.coverage" NAME="chicocl Coverage Results" MODIFIED="1665104013635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$si.coverage" NAME="si Coverage Results" MODIFIED="1665192638278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoServidor.coverage" NAME="pruebaSocketVideoEmisor Coverage Results" MODIFIED="1647200168695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoEmisor.coverage" NAME="pruebaSocketVideoEmisor Coverage Results" MODIFIED="1647199631536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$multiProcesAndmultiCam.coverage" NAME="multiProcesAndmultiCam Coverage Results" MODIFIED="1662412069651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$multiProcesServer.coverage" NAME="multiProcesServer Coverage Results" MODIFIED="1664308958434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$nptest.coverage" NAME="nptest Coverage Results" MODIFIED="1664225664051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nptest" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$servidorPajaros.coverage" NAME="servidorPajaros Coverage Results" MODIFIED="1646860190691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaCamara.coverage" NAME="pruebaCamara Coverage Results" MODIFIED="1662406821915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaSocketVideoEmisor__1_.coverage" NAME="pruebaSocketVideoEmisor (1) Coverage Results" MODIFIED="1647207131724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/codigo_memoria$VideoGearServer.coverage" NAME="VideoGearServer Coverage Results" MODIFIED="1664306452651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nptest" />
+    <SUITE FILE_PATH="coverage/codigo_memoria$pruebaCamara.coverage" NAME="pruebaCamara Coverage Results" MODIFIED="1680483952956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MultiCamTest" />
+    <SUITE FILE_PATH="coverage/codigo_memoria$MultiCamv2.coverage" NAME="MultiCamv2 Coverage Results" MODIFIED="1680482925895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MultiCamTest" />
   </component>
 </project>

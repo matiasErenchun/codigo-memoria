@@ -2,6 +2,7 @@ import os
 import cv2
 import threading
 
+
 class camThread(threading.Thread):
 
     def __init__(self, previewName, camID):
@@ -12,6 +13,7 @@ class camThread(threading.Thread):
     def run(self):
         print("Starting " + self.previewName)
         camPreview(self.previewName, self.camID)
+
 
 def camPreview(previewName, camID):
     cv2.namedWindow(previewName)
@@ -30,9 +32,30 @@ def camPreview(previewName, camID):
             break
     cv2.destroyWindow(previewName)
 
+
+def contar_camaras():
+    num_cameras = 0
+    while True:
+        try:
+            cap = cv2.VideoCapture(num_cameras)
+            if not cap.read()[0]:
+                break
+        except Exception:
+            print("si")
+            break
+
+        num_cameras += 1
+        cap.release()
+    return num_cameras
+
+
 if __name__ == '__main__':
     print("hola")
-    thread1 = camThread("Camera 1", 0)
-    thread2 = camThread("Camera 2", 1)
-    thread1.start()
-    thread2.start()
+    num_camaras = contar_camaras()
+    list_thread = []
+    for i in range(num_camaras):
+        thread = camThread("camera "+str(i), i)
+        list_thread.append(thread)
+
+    for j in range(num_camaras):
+        list_thread[j].start()
