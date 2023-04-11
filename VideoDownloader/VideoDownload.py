@@ -15,15 +15,16 @@ def descargarVideo(url):
             .download(
             output_path=out_put_path)
         print("se descargo: %s", youtube.title)
-        namefiel=youtube.title+".mp4"
-        return 1,namefiel
+        namefiel = youtube.title + ".mp4"
+        return 1, namefiel
     except:
         print("error al tratar de descargar el video")
         return -1
 
+
 def transfor_video_to_image():
-    path_videos = "D:\\videosRecolectados"
-    patdestino = "D:\\framesdevideorecolectado\\"
+    path_videos = "E:\\resposGit\\codigo-memoria\\VideoDownloader\\videos_recolectado"
+    patdestino = "E:\\resposGit\\codigo-memoria\\VideoDownloader\\frames_recolectados\\"
     path = os.path.join(path_videos)
     for video in os.listdir(path):
         try:
@@ -36,22 +37,23 @@ def transfor_video_to_image():
                 print("no existe")
                 os.mkdir(mipath)
                 midestino = os.path.join(mipath)
-                count =0
-                while(videocaptura.isOpened()):
+                count = 0
+                while (videocaptura.isOpened()):
                     os.path.join(patdestino)
                     ret, frame = videocaptura.read()
-                    if(ret== True and count%25 == 0):#revisar como quedan los nombres
+                    if (ret == True and count % 25 == 0):  # revisar como quedan los nombres
                         cv2.imwrite(midestino + video + 'img-%05d.jpg' % count, frame)
-                        if(cv2.waitKey(1) == ord('s')):
+                        if (cv2.waitKey(1) == ord('s')):
                             break
-                    elif(not ret):
+                    elif (not ret):
                         break
-                    count+=1
+                    count += 1
             else:
-                print("la carpeta de"+video+" ya existe")
+                print("la carpeta de" + video + " ya existe")
         except:
             print("error al abrir el video")
     print("eso es to, eso es to, eso es todo amigos")
+
 
 '''def transfor_video_to_image(video):
     path_videos = "D:\\videosRecolectados"
@@ -88,6 +90,7 @@ def transfor_video_to_image():
         print("error al abrir el video")
     print("se termino de cortar el video:"+video)
 '''
+
 
 def menu():
     print("ingrese una de las siguentes opciones:")
