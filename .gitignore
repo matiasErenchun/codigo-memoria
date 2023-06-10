@@ -9,7 +9,11 @@ entornoMemoria/entono_memoria/
 
 VideoDownloader/videos_recolectado/
 
+VideoDownloader/frames_recolectados/
+
 TestSockets/imagenes_capturadas/
+
+imagenesEtiquetadas/
 
 VideoDownloader/frames_recolectados/volando_halcon_de_harris.mp4/
 
