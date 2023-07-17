@@ -5,6 +5,7 @@ import os
 import datetime
 import random
 from queue import Queue
+import multiprocessing
 
 
 def contar_camaras():
@@ -99,9 +100,10 @@ def controlador_camar(barrier, id_camara, cola_mensajes, cola_errores):
             cola_errores.put(data_error)
 
 
-async def websocket_client(message_queue):
+async def websocket_client(barrier, message_queue):
 
     uri = "ws://localhost:8765"  # Especifica la dirección del servidor websocket
+    barrier.wait()
     async with websockets.connect(uri, ) as websocket:
         while True:
             try:
@@ -114,8 +116,8 @@ async def websocket_client(message_queue):
                 # Espera la respuesta del servidor
                 # response = await websocket.recv()
                 # print(f"Respuesta recibida: {response}")
-
-
+            except Exception:
+                print("algo ocurre")
     print("Conexión cerrada.")
 
 
@@ -123,4 +125,14 @@ async def websocket_client(message_queue):
 if __name__ == '__main__':
     cola_mensajes = Queue()
     cola_errores = Queue()
-    asyncio.get_event_loop().run_until_complete(websocket_client(cola_mensajes))
+    num_children=contar_camaras()
+    barrier = multiprocessing.Barrier(num_children + 1)
+
+    processs = []
+    for i in range(num_children):
+        p = multiprocessing.Process(target=controlador_camar, args=(barrier, i, cola_mensajes, cola_errores))
+        p.start()
+        processs.append(p)
+    print(f"procesos iniciados{len(processs)}")
+    #ver como funca esta parte.
+    asyncio.get_event_loop().run_until_complete(websocket_client(barrier, cola_mensajes))

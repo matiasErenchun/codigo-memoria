@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eecbf171-8265-446f-8fe7-7bfb1a401e45" name="Changes" comment="Wip(websocket)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestWebSockets/ClienteWebSocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestWebSockets/ClienteWebSocket.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,6 +202,7 @@
       <workItem from="1688940280514" duration="2095000" />
       <workItem from="1689016237439" duration="2279000" />
       <workItem from="1689616856312" duration="3124000" />
+      <workItem from="1689632870036" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="Wip(websocket)">
       <option name="closed" value="true" />
