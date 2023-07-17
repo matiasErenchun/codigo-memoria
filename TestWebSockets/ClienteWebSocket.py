@@ -103,15 +103,18 @@ async def websocket_client(message_queue):
 
     uri = "ws://localhost:8765"  # Especifica la dirección del servidor websocket
     async with websockets.connect(uri, ) as websocket:
-        # Envía mensajes al servidor
-        data = message_queue.get(timeout=20)
-        serialized_data = str(data).encode()
-        await websocket.send(serialized_data)
-        print(f"Mensaje enviado")
+        while True:
+            try:
+                # Envía mensajes al servidor
+                data = message_queue.get(timeout=20)
+                serialized_data = str(data).encode()
+                await websocket.send(serialized_data)
+                print(f"Mensaje enviado")
 
-        # Espera la respuesta del servidor
-        # response = await websocket.recv()
-        # print(f"Respuesta recibida: {response}")
+                # Espera la respuesta del servidor
+                # response = await websocket.recv()
+                # print(f"Respuesta recibida: {response}")
+
 
     print("Conexión cerrada.")
 
