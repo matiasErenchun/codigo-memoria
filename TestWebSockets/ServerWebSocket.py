@@ -40,7 +40,7 @@ async def websocket_handler(websocket, path):
 
     except websockets.exceptions.ConnectionClosedOK:
         # La conexión websocket se ha cerrado de forma normal
-        print("Conexión cerrada de forma normal.")
+        print("Conexión cerrada.")
 
     except websockets.exceptions.ConnectionClosedError as e:
         # La conexión websocket se ha cerrado con un error
