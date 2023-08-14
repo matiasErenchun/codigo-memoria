@@ -19,5 +19,5 @@ def remove_images_without_xml(root_folder):
 
 
 if __name__ == '__main__':
-    root_folder = 'D:\\mm\\imagenes\\AAAAAAAAA'  # Change this to the root folder path
+    root_folder = 'D:\\mm\\imagenes\\AAAAAAA2'  # Change this to the root folder path
     remove_images_without_xml(root_folder)
