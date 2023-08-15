@@ -4,9 +4,9 @@
     <div>
       <p>filtros</p>
     </div>
-    <div>
-      <div v-for="(item) in visibleItems" :key="item.id">
-        <ImageContainer :image-src="item.url" :image-name="item.id" loading="lazy">
+    <div class="flex-container">
+      <div v-for="(item) in visibleItems" :key="item.id" class="flex-item">
+        <ImageContainer :image-src="item.url" :image-name="item.id.toString()" loading="lazy">
         </ImageContainer>
       </div>
     </div>
@@ -62,5 +62,15 @@ export default {
 </script>
 
 <style scoped>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Esto permite que los elementos se envuelvan en una nueva fila */
+}
+.flex-item {
+  flex: 1; /* Esto hace que los elementos ocupen el mismo espacio disponible */
+  margin: 10px; /* Agrega margen para separar los elementos */
+  max-width: 30%;
+  max-height: 35%;
+}
 
 </style>
