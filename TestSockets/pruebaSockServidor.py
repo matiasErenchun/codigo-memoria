@@ -30,15 +30,16 @@ def process_image(conn, addr):
             # Recibe los datos del cliente
             size_data = conn.recv(4)
             size = int.from_bytes(size_data, byteorder='big')
-
+            print(f"size: {size}")
             # Recibir datos de imagen en paquetes
             data = b''
-            while len(data) < size:
+            wdata = len(data)
+            while wdata < size:
                 packet = conn.recv(BUFFER_SIZE)
                 if not packet:
                     break
                 data += packet
-
+            print(f"len data{wdata}")
             # Convierte la cadena de bytes en un diccionario
             serialized_data = data.decode()
             data = eval(serialized_data)
@@ -64,14 +65,15 @@ def process_image(conn, addr):
             # Convierte la hora en un objeto datetime
             time_obj = datetime.datetime.strptime(time_str, "%Y-%m-%d %H%M%S.%f")
 
-            # print('Imagen recibida y guardada correctamente.')
-            # print(f'Hora de la toma de la imagen: {time_obj}')
+            print('Imagen recibida y guardada correctamente.')
+            print(f'Hora de la toma de la imagen: {time_obj}')
 
             # Cierra la conexión
         except Exception as e:
             # Código que se ejecuta en caso de una excepción
             print('Ocurrió una excepción: probalbemente nad ane el buffer')
     conn.close()
+
 
 def start_server():
     pool = mp.Pool(4)
@@ -84,8 +86,8 @@ def start_server():
         pool.apply_async(process_image, args=(conn, addr))
 
         # Cerrar pool de procesos
-        #img = cv2.imread('E:\\resposGit\\codigo-memoria\\TestSockets\\imagenes_capturadas\\7-2023-04-10 114933.078472.jpg')
-        #cv2.imshow('Imagen', img)
+        # img = cv2.imread('E:\\resposGit\\codigo-memoria\\TestSockets\\imagenes_capturadas\\7-2023-04-10 114933.078472.jpg')
+        # cv2.imshow('Imagen', img)
         # Esperamos 5 segundos antes de detener los procesos
         # esperamos 20 milisegundos a que se presione una tecla
         key = cv2.waitKey(20)

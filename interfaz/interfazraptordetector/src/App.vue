@@ -3,7 +3,8 @@
     <div id="nav">
       <div style="padding-left: 9%">
         <router-link to="/">Inicio</router-link> |
-        <router-link to="/about">Nosotros</router-link>
+        <router-link to="/about">Nosotros</router-link> |
+        <router-link to="/all_detections">Todas las Detecciones</router-link>
       </div>
     </div>
     <div id="routerView">
