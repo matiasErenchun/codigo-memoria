@@ -9,12 +9,13 @@
         <option value="Ambos">Ambos</option>
       </select>
 
-      <select v-model="selectedOption2" :disabled="!selectedSource">
+      <select v-model="selectedClass" :disabled="!selectedSource">
         <option value="">Selecciona una clase</option>
         <option v-for="option in options2" :value="option.value" :key="option.value">
           {{ option.label }}
         </option>
       </select>
+      <button type="submit" class="btn btn-primary" v-on:click="getImages">Filtrar</button>
     </div>
     <div class="flex-container">
       <div v-for="(item) in visibleItems" :key="item.id" class="flex-item">
@@ -39,7 +40,7 @@ export default {
       currentPage: 1,
       loading: false,
       selectedSource: "",
-      selectedOption2: "",
+      selectedClass: "",
       options2: [],
     };
   },
@@ -49,10 +50,15 @@ export default {
   ,
   methods: {
         async getImages() {
+          if(this.selectedClass=="")
+          {
+            this.selectedClass='All'
+          }
           return await fetch("http://127.0.0.1:5000/getsAll", {
             method: 'POST',
             headers: {
-              'source': this.selectedSource
+              'source': this.selectedSource,
+              'class': this.selectedClass
             }
           }).then(response => {
             return response.json()
@@ -78,26 +84,26 @@ export default {
               { value: "ave_rapaz_volando", label: "ave rapaz volando" },
               { value: "ave_rapaz_posada", label: "ave rapaz posada" },
               { value: "ave_rapaz_tierra", label: "ave rapaz en tierra" },
-              { value: "Todas", label: "Todas" },
+              { value: "All", label: "Todas" },
 
             ];
-            this.selectedOption2 = "";
+            this.selectedClass = "";
           } else if (this.selectedSource === "BirdDetector") {
             this.options2 = [
               { value: "ave_volando", label: "ave volando" },
               { value: "ave_posada", label: "ave posada" },
               { value: "ave_tierra", label: "ave en tierra" },
-              { value: "Todas", label: "Todas" },
+              { value: "All", label: "Todas" },
 
             ];
-            this.selectedOption2 = "";
+            this.selectedClass = "";
           } else {
             this.options2 = [
               { value: "opcion1_0", label: "seleccione una opcion anteriro" },
             ];
-            this.selectedOption2 = "";
+            this.selectedClass = "";
           }
-        }
+        },
   }
 }
 
