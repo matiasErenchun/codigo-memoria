@@ -125,7 +125,7 @@ if __name__ == '__main__':
     cola_mensajes = Queue()
     cola_errores = Queue()
     num_children = contar_camaras()
-    barrier =threading.Barrier(num_children + 1)
+    barrier = threading.Barrier(num_children + 1)
 
     capture_threads=[]
     for i in range(0,num_children):
