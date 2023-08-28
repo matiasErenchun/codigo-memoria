@@ -85,7 +85,7 @@ thread.start()
 # Crear el servidor websocket
 start_server = websockets.serve(
     lambda websocket, path: websocket_handler(websocket, path, barrier, images_queue),
-    "localhost",
+    "192.168.1.38",
     8765,
     max_size=2 ** 25
 )
