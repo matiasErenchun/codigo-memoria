@@ -9,5 +9,3 @@ while True:
     informacionEntrante = conexion.recv(1024)
     print(str(informacionEntrante))
 
-
-
