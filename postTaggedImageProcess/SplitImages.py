@@ -39,8 +39,8 @@ def split_images(root_folder, test_folder, train_folder, split_ratio=0.2):
 
 
 if __name__ == '__main__':
-    root_folder = 'D:\\mm\\imagenes\\AAAAAAAAA'  # Change this to the root images folder path
-    test_folder = 'D:\\mm\\imagenes\\test'  # Change this to the test folder path
-    train_folder = 'D:\\mm\\imagenes\\train'  # Change this to the train folder path
+    root_folder = 'D:\\mm\\imagenes\\AAAAAAAAA3'
+    test_folder = 'D:\\mm\\imagenes\\to_train\\test'
+    train_folder = 'D:\\mm\\imagenes\\to_train\\train'
 
     split_images(root_folder, test_folder, train_folder)

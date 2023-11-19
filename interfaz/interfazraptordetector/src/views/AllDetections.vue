@@ -2,14 +2,14 @@
 <template>
   <div class="componet-div">
     <div class="options-div">
-      <select v-model="selectedSource" @change="updateOptions">
+      <select v-model="selectedSource" @change="updateOptions" class="bordes">
         <option value="">Seleccione el horigen</option>
         <option value="RaptorDetector">Raptor Detector</option>
         <option value="BirdDetector">Bird Detector</option>
         <option value="Ambos">Ambos</option>
       </select>
 
-      <select v-model="selectedClass" :disabled="!selectedSource">
+      <select v-model="selectedClass" :disabled="!selectedSource" class="bordes">
         <option value="">Selecciona una clase</option>
         <option v-for="option in options2" :value="option.value" :key="option.value">
           {{ option.label }}
@@ -19,7 +19,7 @@
     </div>
     <div class="flex-container">
       <div v-for="(item) in visibleItems" :key="item.id" class="flex-item">
-        <ImageContainer :image-src="item.url" :image-name="item.id.toString()" loading="lazy">
+        <ImageContainer v-bind:image-src="item.url" v-bind:id="item.id.toString()" v-bind:class-detection="item.class" v-bind:date-detection="item.date" loading="lazy">
         </ImageContainer>
       </div>
     </div>
@@ -67,6 +67,7 @@ export default {
             console.log(jsonResponse)
             this.items=jsonResponse
             this.visibleItems=this.items
+            console.log(this.visibleItems)
           }).catch(() => {
             this.alertConfig.show = true;
             this.alertConfig.type = "error";
@@ -136,4 +137,8 @@ export default {
   justify-content: flex-end;
 }
 
+.bordes
+{
+  border:1px solid #2c3e50;
+}
 </style>
