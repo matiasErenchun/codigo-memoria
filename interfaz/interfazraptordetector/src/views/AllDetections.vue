@@ -1,4 +1,3 @@
-
 <template>
   <div class="componet-div">
     <div class="options-div">
@@ -18,13 +17,18 @@
       <button type="submit" class="btn btn-primary" v-on:click="getImages">Filtrar</button>
     </div>
     <div class="flex-container">
-      <div v-for="(item) in visibleItems" :key="item.id" class="flex-item">
-        <ImageContainer v-bind:image-src="item.url" v-bind:id="item.id.toString()" v-bind:class-detection="item.class" v-bind:date-detection="item.date" loading="lazy">
-        </ImageContainer>
+      <div v-for="(item) in visibleItems" :key="item.id" class="flex-item" >
+        <div @click="mostrarDetalle(item.id)">
+          <ImageContainer v-bind:image-src="item.url" v-bind:id="item.id.toString()" v-bind:class-detection="item.class" v-bind:date-detection="item.date" loading="lazy">
+          </ImageContainer>
+        </div>
+        <div v-if="imagenDetalleIndex === item.id" class="imagen-detalle">
+          <img :src="item.url" alt="Imagen Detalle" />
+          <button @click="cerrarDetalle">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-
 </template>
 <script>
 
@@ -42,6 +46,7 @@ export default {
       selectedSource: "",
       selectedClass: "",
       options2: [],
+      imagenDetalleIndex: null,
     };
   },
   created() {
@@ -50,7 +55,7 @@ export default {
   ,
   methods: {
         async getImages() {
-          if(this.selectedClass=="")
+          if(this.selectedClass==="")
           {
             this.selectedClass='All'
           }
@@ -105,6 +110,13 @@ export default {
             this.selectedClass = "";
           }
         },
+    mostrarDetalle(index) {
+      this.imagenDetalleIndex = index;
+    },
+    cerrarDetalle() {
+      this.imagenDetalleIndex = null;
+    },
+
   }
 }
 
@@ -141,4 +153,20 @@ export default {
 {
   border:1px solid #2c3e50;
 }
+
+.imagen-detalle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  z-index: 1; /* Para que el detalle esté encima de las otras imágenes */
+  max-width: 80%; /* Ajusta el ancho máximo según sea necesario */
+  max-height: 80%; /* Ajusta la altura máxima según sea necesario */
+  overflow: auto; /* Agrega desplazamiento si la imagen es demasiado grande */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
 </style>

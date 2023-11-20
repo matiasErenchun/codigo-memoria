@@ -1,22 +1,34 @@
 
 <template>
-  <div class="ImageContainer">
-    <img :src="imageSrc" class="responsive-image">
-    <div class="contenedor-texto">
-      <div class="fila">
-        <p class="letra-pequena margen-derecho">Id: {{id}}</p>
-        <p class="letra-pequena"> Clase: {{ formatearClase(classDetection)}}</p>
-      </div>
-      <div class="fila">
-        <p class="letra-pequena">Fecha deteccion: {{formatearFecha(dateDetection)}}</p>
+  <div>
+    <div class="ImageContainer"
+         @mouseover="activarSombra"
+         @mouseout="desactivarSombra"
+    >
+      <img :src="imageSrc" class="responsive-image">
+      <div class="contenedor-texto">
+        <div class="fila">
+          <p class="letra-pequena margen-derecho">Id: {{id}}</p>
+          <p class="letra-pequena"> Clase: {{ formatearClase(classDetection)}}</p>
+        </div>
+        <div class="fila">
+          <p class="letra-pequena">Fecha deteccion: {{formatearFecha(dateDetection)}}</p>
+        </div>
       </div>
     </div>
   </div>
+
+
 </template>
 
 <script>
 
 export default {
+  data() {
+    return {
+      mostrarModal: false,
+    };
+  },
   props: {
     id: String,
     imageSrc:String,
@@ -59,6 +71,14 @@ export default {
       formatearClase,
     };
   },
+  methods: {
+    activarSombra() {
+      this.$el.classList.add("sombra-activa");
+    },
+    desactivarSombra() {
+      this.$el.classList.remove("sombra-activa");
+    },
+  }
 };
 </script>
 
@@ -73,6 +93,7 @@ export default {
   align-items: center;
   background-color: #2c3e50;
   border:2px solid #2c3e50;
+  transition: box-shadow 0.3s;
 }
 .responsive-image {
   max-width: 100%;
@@ -104,5 +125,8 @@ export default {
   margin-right: 10px; /* Ajusta el espacio entre el primer y segundo P según sea necesario */
 }
 
+.sombra-activa {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra al pasar el ratón */
+}
 
 </style>
