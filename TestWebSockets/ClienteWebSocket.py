@@ -101,7 +101,7 @@ def controlador_camar(barrier, id_camara, cola_mensajes, cola_errores):
 
 
 async def websocket_client(barrier, message_queue):
-    uri = "ws://192.168.18.96:8765"  # Especifica la dirección del servidor websocket
+    uri = "ws://172.28.17.137:8765"  # Especifica la dirección del servidor websocket
     barrier.wait()
     async with websockets.connect(uri, ) as websocket:
         while True:
