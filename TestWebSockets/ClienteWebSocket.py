@@ -6,6 +6,7 @@ import datetime
 import random
 from queue import Queue
 import threading
+import sys
 
 
 def contar_camaras():
@@ -69,7 +70,27 @@ def resoluciones_disponibles(i):
     return mwidth, mheight
 
 
-def controlador_camar(barrier, id_camara, cola_mensajes, cola_errores):
+def enqueue_images(camera, width, height, id_camara, cola_mensajes, cola_errores):
+    ret, frame = camera.read()
+    if ret:
+        retval, buffer = cv2.imencode('.jpg', frame)
+        image_data = buffer.tobytes()
+
+        # Obtiene la fecha y hora actual
+        now = datetime.datetime.now()
+        time_str = now.strftime("%Y-%m-%d %H%M%S.%f")
+
+        # Combina los datos de la imagen y la hora en un diccionario
+        data = {'image': image_data, 'time': time_str, 'random': random.randint(1, 100), 'width': width,
+                'height': height}
+
+        cola_mensajes.put(data)
+    else:
+        data_error = {"camra": id_camara, "error": "no se pudo capturar frame"}
+        cola_errores.put(data_error)
+
+
+def controlador_camar(barrier, id_camara, cola_mensajes, cola_errores, prueba):
     width, height = resoluciones_disponibles(id_camara)
     camera = get_camera(id_camara)
     camera.set(cv2.CAP_PROP_FPS, 10.0)
@@ -79,29 +100,22 @@ def controlador_camar(barrier, id_camara, cola_mensajes, cola_errores):
 
     print(f"camara {id_camara}Resolución del frame: {width} x {height}")
     barrier.wait()
-    continuar = True
-    while continuar:
-        ret, frame = camera.read()
-        if ret:
-            retval, buffer = cv2.imencode('.jpg', frame)
-            image_data = buffer.tobytes()
-
-            # Obtiene la fecha y hora actual
-            now = datetime.datetime.now()
-            time_str = now.strftime("%Y-%m-%d %H%M%S.%f")
-
-            # Combina los datos de la imagen y la hora en un diccionario
-            data = {'image': image_data, 'time': time_str, 'random': random.randint(1, 100), 'width': width,
-                    'height': height}
-
-            cola_mensajes.put(data)
-        else:
-            data_error = {"camra": id_camara, "error": "no se pudo capturar frame"}
-            cola_errores.put(data_error)
+    if prueba == True:
+        contador = 0
+        print("test :D")
+        while contador < 10:
+            enqueue_images(camera, width, height, id_camara, cola_mensajes, cola_errores)
+            contador += 1
+        print("Prueba terminada")
+    else:
+        continuar = True
+        while continuar:
+            enqueue_images(camera, width, height, id_camara, cola_mensajes, cola_errores)
 
 
-async def websocket_client(barrier, message_queue):
-    uri = "ws://172.28.17.137:8765"  # Especifica la dirección del servidor websocket
+async def websocket_client(barrier, message_queue, ip, puerto):
+    uri = f"ws://{ip}:{puerto}"  # Especifica la dirección del servidor websocket
+    print(uri)
     barrier.wait()
     async with websockets.connect(uri, ) as websocket:
         while True:
@@ -120,22 +134,43 @@ async def websocket_client(barrier, message_queue):
     print("Conexión cerrada.")
 
 
+def get_parameters():
+    # Verificar que se hayan proporcionado suficientes argumentos
+    if len(sys.argv) < 4:
+        print("Uso: python mi_script.py <ip> <puerto> <modo>")
+        sys.exit(1)
+
+    # Obtener los argumentos de línea de comandos
+    ip = sys.argv[1]
+    puerto = int(sys.argv[2])
+    modo = sys.argv[3]
+
+    # Tu lógica de programa aquí
+    return ip, puerto, modo
+
+
 # Iniciar el cliente websocket
 if __name__ == '__main__':
+    ip, puerto, prueba = get_parameters()
+    print(prueba)
+    num_children = 1
+    if prueba != "True":
+        num_children = contar_camaras()
+        prueba = False
+    print(f"nc:{num_children},p:{prueba}")
     cola_mensajes = Queue()
     cola_errores = Queue()
-    num_children = contar_camaras()
     barrier = threading.Barrier(num_children + 1)
 
-    capture_threads=[]
-    for i in range(0,num_children):
+    capture_threads = []
+    for i in range(0, num_children):
         p = capture_threads = []
-        thread = threading.Thread(target=controlador_camar, args=(barrier, i, cola_mensajes, cola_errores))
+        thread = threading.Thread(target=controlador_camar, args=(barrier, i, cola_mensajes, cola_errores, prueba))
         capture_threads.append(thread)
         thread.start()
     print(f"procesos iniciados{len(capture_threads)}")
     # ver como funca esta parte.
-    asyncio.get_event_loop().run_until_complete(websocket_client(barrier, cola_mensajes))
+    asyncio.get_event_loop().run_until_complete(websocket_client(barrier, cola_mensajes, ip, puerto))
 
     for thread in capture_threads:
         thread.join()
