@@ -154,7 +154,9 @@ if __name__ == '__main__':
     ip, puerto, prueba = get_parameters()
     print(prueba)
     num_children = 1
-    if prueba != "True":
+    if prueba == 'True':
+        prueba = True
+    else:
         num_children = contar_camaras()
         prueba = False
     print(f"nc:{num_children},p:{prueba}")
